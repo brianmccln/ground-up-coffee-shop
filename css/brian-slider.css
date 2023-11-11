@@ -1,0 +1,62 @@
+/* slideshow applied to ul where each li is one slide */
+.slideshow-container {
+    background-color: #333;
+    padding: 10px;
+    margin: 0 auto 50px auto;
+    min-height: 750px;
+    color: #fff;
+    text-align: center;
+}
+.slideshow-container h2 {
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.slideshow-holder {
+    position: relative;
+    padding: 10px;
+    min-height: 675px;
+    margin: 0px;
+    overflow-x: auto;
+}
+.slideshow {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 0 0;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.slide {
+    margin-right: 20px;
+    text-align: left;
+}
+.slide div {
+    margin: 10px 0;
+    color: #eee;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding-left: 10px;
+    font-weight: bold;
+    border: 3px dotted #aaa;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+}
+button {
+    padding: 10px;
+    margin: 10px 10px 15px 0;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    padding: 10px;
+}
+h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+}

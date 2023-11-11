@@ -1,0 +1,266 @@
+body {
+    background-color: #365b71;
+    margin: 0;
+    /* font-size: 12px; */
+    font-family: sans-serif;
+}
+
+.container {
+    /* border: 6px dashed blue; */
+    margin: 10px auto;
+    background-color: #fff;
+    min-height: 150vh;
+    overflow-x: hidden; /* get rid of side scrolling */
+}
+
+nav {
+    /* border: 6px dashed red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3f210e;
+    height: 60px;
+    padding: 0.85rem;
+    text-align: center;
+}
+
+nav img {
+    width: 200px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 210px;
+    /* border: 2px dashed red; */
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #8b0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #3f210e;
+    background-image: 
+        linear-gradient(#3f210e, transparent),
+        url("../images/ground-up-coffee-shop-2600x1300.jpg");
+    background-size: cover;
+    height: 450px;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    margin: 2rem;
+    padding: 1.15rem 0;
+    font-size: 2rem;
+}
+
+main {
+    /* border: 6px dashed red; */
+    text-align: center;
+    margin: 1.5rem auto 0;
+}
+
+main h2 {
+    margin: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #622f10;
+}
+
+h2 span {
+    font-size: 2.5rem;
+    text-transform: none; /* turn off uppercase */
+}
+
+.little-svg {
+    margin-top: 1rem;
+    width: 85px;
+}
+
+/* flex for the sections to get img-text side-by-side */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px dashed orange; */
+    margin: 2rem 1rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+section img {
+    width: 300px;
+}
+
+section div {
+    /* border: 3px dashed purple; */
+    margin: 1rem;
+    padding: 1rem;
+}
+
+section p {
+    color: #9b5225;
+    line-height: 1.33rem;
+}
+
+h3 {
+    font-size: 1.33rem;
+    color: #622f10;
+}
+
+.food-drink-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 92%;
+    /* border: 5px dashed pink; */
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.drink, .food {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 375px;
+    height: 290px;
+}
+
+.drink {
+    background-image: url(../images/glass-of-iced-coffee.png);
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.food {
+    background-image: url(../images/egg-on-toast.png);
+    background-size: cover;
+}
+
+h4 {
+    font-size: 1.33rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+
+footer {
+    border-top: 1px solid #9b5225;
+    padding: 1rem;
+    /* border: 5px dashed yellow; */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 5px dashed purple; */
+}
+
+.info p {
+    margin: 0.33rem;
+}
+
+.info p:nth-child(2) {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0.5rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (min-width: 880px) {
+
+    .container {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        /* border: 2px dashed yellow; */
+    }
+
+    nav ul {
+        padding-top: 1.5rem;
+    }
+
+    header {
+        align-items: center;
+        height: 700px;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+        margin-bottom: 6rem;
+    }
+
+    main {
+        margin: 4rem auto 0;
+        /* border: 6px dashed green; */
+        max-width: 1000px;
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* target the 3rd child that is also a section in main to reverse img-text positions nth-child(3) means 3rd child of parent, which is main which goes: div, sect, sect, sect 
+    so the 3rd child is the 2nd section */
+    main section:nth-child(3) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    section div {
+        width: 550px;
+    }
+
+    .food-drink-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .drink {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .info {
+        flex-direction: row;
+    }
+
+}
+

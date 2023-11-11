@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ground Up Coffee Shop</title>
+
+    <link href="css/tabby-ui.min.css" rel="stylesheet">
+    <link href="css/brian-slider.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+
+        header {
+            background-image: 
+                linear-gradient(#3f210e, transparent),
+                url("images/coffee-history/CoffeeHistory9.jpg");
+                background-position: center 33%;
+        }
+        main {
+            display: block;
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 1100px;
+        }
+        main ul {
+            list-style-type: none;
+        }
+        main div {
+            text-align: left;
+        }
+        main h2 {
+            text-align: center;
+        }
+        .splide {
+            padding: 0 55px 35px;
+        }
+        .tabbed-content {
+            padding-top: 1rem;
+        }
+
+        @media (min-width: 880px) {
+            header {
+                background-image: 
+                linear-gradient(#3f210e, transparent),
+                url("images/forbidden-city-starbucks.jpg");
+                align-items: flex-start;
+                height: 550px;
+                background-position: center bottom;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <nav>
+            <a href="index.html">
+                <img src="images/ground-up-coffee-logo.svg" 
+                     alt="ground up coffee shop logo">
+            </a>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <!-- <h1>About Ground Up Coffee Shop</h1> -->
+        </header>
+
+        <main>
+
+            <!-- tabby : this ul renders as Tabs -->
+            <ul data-tabs>
+                <li><a data-tabby-default href="#about-us">About Us</a></li>
+                <li><a href="#about-our-coffee">About Our Coffee</a></li>
+                <li><a href="#history-of-coffee">History of Coffee</a></li>
+            </ul>
+
+            <div id="about-us" class="tabbed-content">
+               <h2>About Us</h2>
+               <p>Tab 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate distinctio aut voluptates, laborum quod eaque veniam molestiae illo fugiat ut veritatis! Aperiam voluptatum ipsa voluptate fuga voluptates illo neque iure doloribus ad beatae nihil, deleniti, et, dolor quia explicabo obcaecati quis nobis! Amet quis eum suscipit sapiente quidem nihil?</p>
+            </div>
+
+            <div id="about-our-coffee" class="tabbed-content">
+               <h2>About Our Coffee</h2>
+               <p>Tab 2 Aperiam voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate distinctio aut voluptates, laborum quod eaque veniam molestiae illo fugiat ut veritatis! Aperiam voluptatum ipsa voluptate fuga voluptates illo neque iure doloribus ad beatae nihil, deleniti, et, dolor quia explicabo obcaecati quis nobis! Amet quis eum suscipit sapiente quidem nihil?</p>    
+            </div>
+
+            <div id="history-of-coffee" class="tabbed-content">
+                <h2>History of Coffee</h2>
+                <p>Tab 3 Amet quis eum suscipitLorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate distinctio aut voluptates, laborum quod eaque veniam molestiae illo fugiat ut veritatis! Aperiam voluptatum ipsa voluptate fuga voluptates illo neque iure doloribus ad beatae nihil, deleniti, et, dolor quia explicabo obcaecati quis nobis! Amet quis eum suscipit sapiente quidem nihil?</p>   
+        
+                    <div class="slideshow-container">
+
+                        <h3 style="color:#fff; font-size:1.75rem;">History of Coffee</h3> 
+
+                        <div class="slideshow-holder">
+            
+                            <ul class="slideshow"></ul>
+
+                        </div>
+                    
+                        <button id="prev"><<</button>
+                        <button id="next">>></button>
+                        <button id="auto-play">AUTO</button>
+        
+                    </div>
+
+                </div> <!-- close tabby -->
+            </div>
+
+        </main>
+
+        <footer>
+
+            <div class="info">
+                <p>718-285-6250</p>
+                <p>57 Grand Street, Brooklyn, NY</p>
+                <p>hello@groundup.com</p>
+            </div>
+
+            <div class="social">
+                <img src="images/icon-facebook.svg" class="facebook">
+                <img src="images/icon-twitter.svg" class="twitter">
+                <img src="images/icon-instagram.png" class="instagram">
+            </div>
+
+            <p>COPYRIGHT &#169 GROUNDUP</p>
+
+        </footer>
+
+    </div>
+
+    <script src="js/tabby.min.js"></script>
+    <script src="js/coffee-data.js"></script>
+    <script src="js/BrianSlider.js"></script>
+
+    <script>
+        
+        const tabby = new Tabby('[data-tabs]');
+
+        const slideshow = new BrianSlider(coffeeHistArray, '.slideshow');
+        slideshow.load();
+
+    </script>
+
+</body>
+
+</html>
